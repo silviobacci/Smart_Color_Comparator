@@ -1,0 +1,62 @@
+[System]
+Name='fuzzy_evaluation'
+Type='mamdani'
+Version=2.0
+NumInputs=3
+NumOutputs=1
+NumRules=14
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='ACCURACY_1'
+Range=[0 1]
+NumMFs=3
+MF1='LOW':'trapmf',[0 0 0.5 0.6]
+MF2='MEDIUM':'trapmf',[0.5 0.6 0.85 0.95]
+MF3='HIGH':'trapmf',[0.85 0.95 1 1]
+
+[Input2]
+Name='ACCURACY_2'
+Range=[0 1]
+NumMFs=3
+MF1='LOW':'trapmf',[0 0 0.5 0.6]
+MF2='MEDIUM':'trapmf',[0.5 0.6 0.85 0.95]
+MF3='HIGH':'trapmf',[0.85 0.95 1 1]
+
+[Input3]
+Name='ACCURACY_3'
+Range=[0 1]
+NumMFs=3
+MF1='LOW':'trapmf',[0 0 0.5 0.6]
+MF2='MEDIUM':'trapmf',[0.5 0.6 0.85 0.95]
+MF3='HIGH':'trapmf',[0.85 0.95 1 1]
+
+[Output1]
+Name='QUALITY'
+Range=[0 1]
+NumMFs=5
+MF1='LOW':'trimf',[0 0 0.25]
+MF2='MEDIUM':'trimf',[0.25 0.5 0.75]
+MF3='HIGH':'trimf',[0.75 1 1]
+MF4='MEDIUM-LOW':'trimf',[0 0.25 0.5]
+MF5='MEDIUM-HIGH':'trimf',[0.5 0.75 1]
+
+[Rules]
+1 1 0, 1 (1) : 1
+0 1 1, 1 (1) : 1
+-1 1 -1, 4 (1) : 1
+1 2 -1, 2 (1) : 1
+-1 2 1, 2 (1) : 1
+2 2 2, 2 (1) : 1
+-1 3 1, 5 (1) : 1
+1 3 -1, 5 (1) : 1
+-1 3 -1, 5 (1) : 1
+3 3 -1, 3 (1) : 1
+-1 3 3, 3 (1) : 1
+2 3 2, 3 (1) : 1
+1 3 1, 4 (1) : 1
+1 2 1, 4 (1) : 1
