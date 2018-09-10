@@ -49,19 +49,6 @@ workspace			 	-> different matlab workspaces realized
 
 The same list can be found also in the <a href="https://github.com/ciabbi94/turtlebot3_environment_scanner/graphs/contributors">contributors of this project.</a>
 
-## License and citation
-The project comes with an Apache 2 license. Of you want to use this code, you can do without limitation but you have to document the modifications and include this license. If you want to cite, please refer to:
-
-```
-@misc {
-bacci2018,
-author = "Silvio Bacci",
-title = "Smart colour comparator based on a neural network",
-year = 2018,
-address = "Pisa"
-}
-```
-
 
 
 
